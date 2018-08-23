@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-sassy-app": {
+    "vlocity-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-sassy-app",
+            "outputPath": "dist/vlocity-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -30,7 +30,10 @@
               "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -55,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-sassy-app:build"
+            "browserTarget": "vlocity-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-sassy-app:build:production"
+              "browserTarget": "vlocity-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-sassy-app:build"
+            "browserTarget": "vlocity-app:build"
           }
         },
         "test": {
@@ -100,7 +103,7 @@
         }
       }
     },
-    "my-sassy-app-e2e": {
+    "vlocity-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -108,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-sassy-app:serve"
+            "devServerTarget": "vlocity-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-sassy-app:serve:production"
+              "devServerTarget": "vlocity-app:serve:production"
             }
           }
         },
@@ -128,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "my-sassy-app"
+  "defaultProject": "vlocity-app"
 }
