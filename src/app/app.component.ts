@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { PERSONS } from './resources/persons';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,5 +8,7 @@ import { PERSONS } from './resources/persons';
 export class AppComponent {
   title = 'Vlocity';
 
-  persons = PERSONS;
+  setObject(person): void {
+    console.log('selected person', person);
+  }
 }

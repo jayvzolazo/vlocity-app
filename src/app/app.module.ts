@@ -5,11 +5,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PersonsSidebarComponent } from './persons-sidebar/persons-sidebar.component';
+import { PersonProfileComponent } from './person-profile/person-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    PersonsSidebarComponent,
+    PersonProfileComponent
   ],
   imports: [
     BrowserModule,
