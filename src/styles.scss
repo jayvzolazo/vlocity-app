@@ -11,6 +11,12 @@ a {
 .btn-outline-primary {
   color: #00a1e0;
   border-color: #00a1e0;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #00a1e0;
+    border-color: #00a1e0;
+  }
 }
 
 .list-group-item.active {
