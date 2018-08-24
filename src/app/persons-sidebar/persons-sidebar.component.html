@@ -1,5 +1,6 @@
 <div class="list-group">
   <a href="#" class="list-group-item list-group-item-action" 
-    *ngFor="let person of persons"
-    (click)="onSelect(person)">{{ person.name }}</a>
+    *ngFor="let person of persons; let i = index"
+    (click)="onSelect(person, i)"
+    [ngClass]="{ 'active ' : selected[i] }">{{ person.name }}</a>
 </div>
