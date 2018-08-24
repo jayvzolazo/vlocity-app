@@ -9,17 +9,17 @@ import { PERSONS } from '../resources/persons';
   styleUrls: ['./persons-sidebar.component.scss']
 })
 export class PersonsSidebarComponent implements OnInit {
-
+  // event declaration
   @Output() setPerson = new EventEmitter<any>();
 
   persons = PERSONS;
-  // selectedPerson: Person;
 
   constructor() { }
 
   ngOnInit() { }
 
   onSelect(person: Person): void {
+    // event usage
     this.setPerson.emit(person);
   }
 

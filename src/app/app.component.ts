@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Vlocity';
 
-  setObject(person): void {
-    console.log('selected person', person);
+  selectedObject = null;
+
+  setObject(detail): void {
+    // console.log('selected person', detail);
+    this.selectedObject = detail;
   }
 }
