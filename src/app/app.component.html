@@ -6,8 +6,18 @@
       <app-persons-sidebar (setPerson)="setObject($event)"></app-persons-sidebar>
     </div>
     <div class="col-10">
-      <div class="border bg-white p-2">
-        <p *ngIf="selectedObject">{{ selectedObject.name }}</p>
+      <div class="border bg-white p-3">
+        <div *ngIf="!selectedObject">
+          <h2>Welcome to Vlocity!</h2>
+          <hr />
+          <p>Vlocity, a Forbes Cloud 100 company and strategic Salesforce ISV, delivers industry-specific cloud and mobile software that
+          embed digital, omnichannel processes for customer-centric industries. Built in partnership with Salesforce, the global leader
+          in CRM, Vlocity is one of Salesforce’s fastest growing partners. Vlocity Industry Cloud Apps embed industry-specific functionality,
+          best practices and business processes for the Communications & Media, Insurance & Financial Services, Health, Energy & Utilities
+          and Government industries. Vlocity enables companies to achieve faster business agility and time to value from the cloud
+          across digital and traditional channels.</p>
+        </div>
+        <div *ngIf="selectedObject"></div>
       </div>
     </div>
   </div>
