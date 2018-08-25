@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faSearch } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHome, faSearch);
+library.add(faCaretDown, faSearch);
 
 @Component({
   selector: 'app-navbar',
@@ -20,6 +20,7 @@ library.add(faHome, faSearch);
 export class NavbarComponent implements OnInit {
 
   faSearch = faSearch;
+  faCaretDown = faCaretDown;
 
   constructor(private location: Location) { }
 
