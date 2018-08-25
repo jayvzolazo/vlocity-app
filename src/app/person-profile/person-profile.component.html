@@ -37,19 +37,7 @@
       *ngIf="activeTab === 'Likes'">
       <div class="row">
         <div class="col">
-          <div class="card-deck">
-            <div *ngFor="let like of person.likes" class="card" style="width: 14rem;">
-              <img class="card-img-top" [src]="'../assets/' + like + '.jpg'" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">{{ like }}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- <ul>
-            <li *ngFor="let like of person.likes">{{ like }}</li>
-          </ul> -->
+          <app-cards [cardData]="person.likes"></app-cards>
         </div>
       </div>
     </div>
@@ -58,9 +46,7 @@
       *ngIf="activeTab === 'Dislikes'">
       <div class="row">
         <div class="col">
-          <ul>
-            <li *ngFor="let dislike of person.dislikes">{{ dislike }}</li>
-          </ul>
+          <app-cards [cardData]="person.dislikes"></app-cards>
         </div>
       </div>
     </div>

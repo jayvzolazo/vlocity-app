@@ -7,13 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PersonsSidebarComponent } from './persons-sidebar/persons-sidebar.component';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
+import { CardsComponent } from './cards/cards.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PersonsSidebarComponent,
-    PersonProfileComponent
+    PersonProfileComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+@import '../../colors.scss';
+
+.card {
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 10px $gray1;
+  }
+
+  .card-img-top {
+    height: 160px;
+  }
+}
