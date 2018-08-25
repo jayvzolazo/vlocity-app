@@ -1,17 +1,18 @@
-<div class="row mb-4">
-  <div class="col-2">
-    <img class="rounded" [src]="person.img" />
+<div class="bg-white border row mb-4 px-3 pt-3 pb-3">
+  <div class="col-2 pl-0">
+    <img class="rounded profile-photo" [src]="person.img" />
   </div>
-  <div class="col-4 ml-4">
+  <div class="col p-0">
     <h3>{{ person.name }}</h3>
-    <button class="btn btn-outline-primary">
+    <a href="#" class="btn-link">
       <fa-icon [icon]="evenlope"></fa-icon>
-    </button>
+      Send a message
+    </a>
   </div>
 </div>
 
 <div class="row">
-  <div class="col">
+  <div class="col p-0">
     <ul class="nav nav-tabs">
       <li class="nav-item" *ngFor="let tab of tabs; let tabIndex = index">
         <a class="nav-link" href="#" (click)="setTab(tabIndex)"
@@ -21,12 +22,18 @@
       </li>
     </ul>
 
-    <div class="border-left border-bottom border-right px-3 pt-3 pb-3" id="about-person"
+    <div class="bg-white border-left border-bottom border-right px-3 pt-3 pb-3" id="about-person"
       *ngIf="activeTab === 'About'">
       <p>{{ person.description }}</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
-    <div class="border-left border-bottom border-right px-3 pt-3 pb-3" id="likes-person"
+    <div class="bg-white border-left border-bottom border-right px-3 pt-3 pb-3" id="likes-person"
       *ngIf="activeTab === 'Likes'">
       <div class="row">
         <div class="col">
@@ -37,7 +44,7 @@
       </div>
     </div>
 
-    <div class="border-left border-bottom border-right px-3 pt-3 pb-3" id="dislikes-person"
+    <div class="bg-white border-left border-bottom border-right px-3 pt-3 pb-3" id="dislikes-person"
       *ngIf="activeTab === 'Dislikes'">
       <div class="row">
         <div class="col">

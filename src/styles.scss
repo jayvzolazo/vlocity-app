@@ -3,8 +3,8 @@
 
 body {
   padding-top: 3.4rem;
-  // background-color: $gray0;
-  font-size: 12px;
+  background-color: $gray6;
+  font-size: 13px;
 }
 
 a {
@@ -53,4 +53,14 @@ a {
 
 .border {
   border: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.btn {
+  font-size: 13px;
+}
+
+.btn-link {
+  &:hover {
+    text-decoration: none;
+  }
 }
