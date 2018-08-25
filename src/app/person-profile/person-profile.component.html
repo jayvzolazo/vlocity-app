@@ -5,10 +5,11 @@
   <div class="col p-0">
     <h3>{{ person.name }}</h3>
     <div class="clearfix">
-        <a href="#" class="btn-link">
+      <a href="#" class="btn-link"  data-toggle="modal" data-target="#exampleModal">
         <fa-icon [icon]="evenlope"></fa-icon>
         Send a message
       </a>
+      <app-modal-message [person]="person.name"></app-modal-message>
     </div>
     <div class="clearfix">
       <app-ratings></app-ratings>

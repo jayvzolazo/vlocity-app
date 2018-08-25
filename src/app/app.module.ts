@@ -9,6 +9,7 @@ import { PersonsSidebarComponent } from './persons-sidebar/persons-sidebar.compo
 import { PersonProfileComponent } from './person-profile/person-profile.component';
 import { CardsComponent } from './cards/cards.component';
 import { RatingsComponent } from './ratings/ratings.component';
+import { ModalMessageComponent } from './modal-message/modal-message.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RatingsComponent } from './ratings/ratings.component';
     PersonsSidebarComponent,
     PersonProfileComponent,
     CardsComponent,
-    RatingsComponent
+    RatingsComponent,
+    ModalMessageComponent
   ],
   imports: [
     BrowserModule,
