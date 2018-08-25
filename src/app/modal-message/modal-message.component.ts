@@ -19,4 +19,7 @@ export class ModalMessageComponent implements OnInit {
     this.messageSent = true;
   }
 
+  closeModal(): void {
+    this.messageSent = false;
+  }
 }
