@@ -1,12 +1,6 @@
-<!-- <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action"
-    *ngFor="let person of persons; let i = index"
-    (click)="onSelect(person, i)"
-    [ngClass]="{ 'active ' : selected[i] }">{{ person.name }}</a>
-</div> -->
 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
   <div class="sidebar-sticky">
-    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 pt-2 pb-2 mb-1 text-muted bg-gray">
+    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 pt-2 pb-2 mb-0">
       <span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -18,7 +12,7 @@
       </span>
     </h6>
     <ul class="nav flex-column">
-      <li class="nav-item"
+      <li class="nav-item pt-1 pb-1"
         *ngFor="let person of persons; let i = index"
         (click)="onSelect(person, i)"
         [ngClass]="{ 'active ' : selected[i] }">

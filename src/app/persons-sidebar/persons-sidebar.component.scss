@@ -10,37 +10,49 @@
   padding: 48px 0 0; /* Height of navbar */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 
-  .nav {
-    .nav-item {
-      transition: 0.3s;
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 
-      &.active {
-        background-color: $blue1;
-        
-        .nav-link {
-          color: $white;
+    .sidebar-heading {
+      font-size: .75rem;
+      text-transform: uppercase;
+      background-color: $blue2;
+      color: $white;
+    }
+
+    .nav {
+      .nav-item {
+        border-bottom: 1px dotted $gray5;
+        transition: 0.3s;
+
+        &.active {
+          border-right: 4px solid $blue2;
+          background-color: $gray5;
+          
+          .nav-link {
+            font-weight: bold;
+            color: $blue1;
+          }
         }
-      }
 
-      &:hover {
-        background-color: $blue1;
+        &:hover {
+          background-color: $gray5;
 
-        .nav-link {
-          color: $white;
+          .nav-link {
+            color: $blue1;
+          }
         }
       }
     }
   }
 }
 
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
+
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .sidebar-sticky {
@@ -67,8 +79,3 @@
 // .sidebar .nav-link.active .feather {
 //   color: inherit;
 // }
-
-.sidebar-heading {
-  font-size: .75rem;
-  text-transform: uppercase;
-}
