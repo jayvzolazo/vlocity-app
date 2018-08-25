@@ -31,7 +31,7 @@ export const PERSONS: Person[] = [
       'Frank',
       'Manchester United',
       'Football',
-      'Prgoramming'
+      'Programming'
     ],
     dislikes: [
       'Dogs',

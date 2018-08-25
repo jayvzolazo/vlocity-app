@@ -1,6 +1,7 @@
 @import '../../colors.scss';
 
 .card {
+  flex: none;
   transition: 0.3s;
 
   &:hover {

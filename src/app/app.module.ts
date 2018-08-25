@@ -8,6 +8,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PersonsSidebarComponent } from './persons-sidebar/persons-sidebar.component';
 import { PersonProfileComponent } from './person-profile/person-profile.component';
 import { CardsComponent } from './cards/cards.component';
+import { RatingsComponent } from './ratings/ratings.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardsComponent } from './cards/cards.component';
     NavbarComponent,
     PersonsSidebarComponent,
     PersonProfileComponent,
-    CardsComponent
+    CardsComponent,
+    RatingsComponent
   ],
   imports: [
     BrowserModule,

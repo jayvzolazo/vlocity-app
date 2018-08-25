@@ -1,13 +1,21 @@
 <div class="bg-white border row mb-4 px-3 pt-3 pb-3">
   <div class="col-2 pl-0">
-    <img class="rounded profile-photo" [src]="person.img" />
+    <img class="rounded profile-photo img-thumbnail" [src]="person.img" />
   </div>
   <div class="col p-0">
     <h3>{{ person.name }}</h3>
-    <a href="#" class="btn-link">
-      <fa-icon [icon]="evenlope"></fa-icon>
-      Send a message
-    </a>
+    <div class="clearfix">
+        <a href="#" class="btn-link">
+        <fa-icon [icon]="evenlope"></fa-icon>
+        Send a message
+      </a>
+    </div>
+    <div class="clearfix">
+      <app-ratings></app-ratings>
+    </div>
+    <div class="short-description">
+      <p>{{ person.description }}</p>
+    </div>
   </div>
 </div>
 
