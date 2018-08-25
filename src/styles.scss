@@ -1,43 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'colors.scss';
+
 body {
-  padding-top: 4.5rem;
-  background-color: #f5f5f5;
+  padding-top: 3.4rem;
+  background-color: $gray0;
+  font-size: 12px;
 }
 
 a {
-  color: #00a1e0;
+  color: $blue1;
+}
+
+.bg-primary {
+  background-color: $blue1;
+}
+
+.bg-gray {
+  background-color: $gray2;
 }
 
 .btn-outline-primary {
-  color: #00a1e0;
-  border-color: #00a1e0;
+  color: $blue1;
+  border-color: $blue1;
 
   &:hover {
-    color: #ffffff;
-    background-color: #00a1e0;
-    border-color: #00a1e0;
+    color: $white;
+    background-color: $blue1;
+    border-color: $blue1;
   }
 }
 
 .list-group-item.active {
-  background-color: #00a1e0;
-  border-color: #00a1e0;
+  background-color: $blue1;
+  border-color: $blue1;
 }
 
 .navbar {
-  box-shadow: 0 1px 1px #e8e8e8;
+  box-shadow: 0 1px 1px $gray3;
 
   .logo {
     max-width: 200px;
   }
 
   &-white {
-    background-color: #ffffff;
+    background-color: $white;
   }
 }
 
 .bg-white {
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .border {
