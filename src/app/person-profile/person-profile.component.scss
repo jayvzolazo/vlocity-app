@@ -7,10 +7,15 @@
 .nav {
   .nav-item {
     .nav-link {
+      font-size: 14px;
       &.active {
         font-weight: bold;
         cursor: default;
       }
     }
   }
+}
+
+.card-img-top {
+  height: 160px;
 }
