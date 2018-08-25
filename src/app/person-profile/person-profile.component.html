@@ -12,25 +12,40 @@
 
 <div class="row">
   <div class="col">
-    <p>{{ person.description }}</p>
-  </div>
-</div>
+    <ul class="nav nav-tabs">
+      <li class="nav-item" *ngFor="let tab of tabs; let tabIndex = index">
+        <a class="nav-link" href="#" (click)="setTab(tabIndex)"
+          [ngClass]="{ 'active': activeTab === tab }">
+          {{ tab }} {{ (tab === 'About') ? person.name : '' }}
+        </a>
+      </li>
+    </ul>
 
-<div class="row">
-  <div class="col">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Likes</th>
-          <th>Dislikes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>test</td>
-          <td>test</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="border-left border-bottom border-right px-3 pt-3 pb-3" id="about-person"
+      *ngIf="activeTab === 'About'">
+      <p>{{ person.description }}</p>
+    </div>
+
+    <div class="border-left border-bottom border-right px-3 pt-3 pb-3" id="likes-person"
+      *ngIf="activeTab === 'Likes'">
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li *ngFor="let like of person.likes">{{ like }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-left border-bottom border-right px-3 pt-3 pb-3" id="dislikes-person"
+      *ngIf="activeTab === 'Dislikes'">
+      <div class="row">
+        <div class="col">
+          <ul>
+            <li *ngFor="let dislike of person.dislikes">{{ dislike }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

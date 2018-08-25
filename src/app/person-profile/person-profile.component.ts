@@ -15,9 +15,14 @@ export class PersonProfileComponent implements OnInit {
   @Input() person: any;
 
   evenlope = faEnvelope;
+  tabs = ['About','Likes','Dislikes'];
+  activeTab = this.tabs[0];
 
   constructor() { }
 
   ngOnInit() { }
 
+  setTab(tabIndex: number): void {
+    this.activeTab = this.tabs[tabIndex];
+  }
 }
