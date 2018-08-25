@@ -10,6 +10,7 @@ import { PersonProfileComponent } from './person-profile/person-profile.componen
 import { CardsComponent } from './cards/cards.component';
 import { RatingsComponent } from './ratings/ratings.component';
 import { ModalMessageComponent } from './modal-message/modal-message.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ModalMessageComponent } from './modal-message/modal-message.component';
     PersonProfileComponent,
     CardsComponent,
     RatingsComponent,
-    ModalMessageComponent
+    ModalMessageComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

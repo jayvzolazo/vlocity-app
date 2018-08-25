@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -18,6 +18,7 @@ library.add(faCaretDown, faSearch);
   ]
 })
 export class NavbarComponent implements OnInit {
+  @Output() onSearchEvent = new EventEmitter<any>();  
 
   faSearch = faSearch;
   faCaretDown = faCaretDown;
@@ -26,7 +27,19 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() { }
 
+  private search(term: any): void {
+    this.onSearchEvent.emit(term);
+  }
+
   goToPage(path: string): void {
     this.location.go(path);
+  }
+
+  onEnter(searchTerm: any): void {
+    this.search(searchTerm);
+  }
+
+  onSearch(searchTerm: any): void {
+    this.search(searchTerm);
   }
 }
