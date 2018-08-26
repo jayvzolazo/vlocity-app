@@ -1,5 +1,12 @@
 @import '../../colors.scss';
 
+.tab-content {
+  box-shadow: 0 5px #eec75f;
+}
+
+.profile-result {
+  box-shadow:0 5px #438eb9;
+}
 .profile-photo {
   max-width: 164px;
 }
@@ -12,10 +19,12 @@
   .nav-item {
     .nav-link {
       font-size: 16px;
+      cursor: pointer;
 
       &.active {
         font-weight: bold;
         cursor: default;
+        border-top: 3px solid #eec75f;
       }
     }
   }

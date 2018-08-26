@@ -15,6 +15,7 @@ export class AppComponent {
   setObject(detail): void {
     // console.log('selected person', detail);
     this.selectedObject = detail;
+    this.searchResult = false;
   }
 
   onSearchEvent(term): void {

@@ -8,7 +8,7 @@
 
     <div class="col-10" *ngIf="searchResult">
       <div class="p-3">
-        <app-search-result [results]="persons"></app-search-result>
+        <app-search-result [results]="persons" (setProfile)="setObject($event)"></app-search-result>
       </div>
     </div>
 
