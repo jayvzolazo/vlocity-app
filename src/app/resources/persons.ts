@@ -2,6 +2,7 @@ import { Person } from '../class/person';
 
 export const PERSONS: Person[] = [
   {
+    id: 1,
     name: 'Andrew Amernante',
     rating: 3,
     img: 'http://www.fillmurray.com/200/200',
@@ -20,6 +21,7 @@ export const PERSONS: Person[] = [
     ]
   },
   {
+    id: 2,
     name: 'Frank Wang',
     rating: 5,
     img: 'http://www.fillmurray.com/200/200',
@@ -41,6 +43,7 @@ export const PERSONS: Person[] = [
     ]
   },
   {
+    id: 3,
     name: 'Sissi Chen',
     rating: 5,
     img: 'http://www.fillmurray.com/200/200',
@@ -57,6 +60,7 @@ export const PERSONS: Person[] = [
     ]
   },
   {
+    id: 4,
     name: 'Diego Garcia',
     rating: 2,
     img: 'http://www.fillmurray.com/200/200',
@@ -75,6 +79,7 @@ export const PERSONS: Person[] = [
     ]
   },
   {
+    id: 5,
     name: 'Fuad Rashid',
     rating: 4,
     img: 'http://www.fillmurray.com/200/200',

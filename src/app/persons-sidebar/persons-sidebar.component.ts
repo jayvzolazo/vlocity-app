@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { Person} from '../class/person';
+import { Person } from '../class/person';
+import { PersonService } from '../person.service';
+
 import { PERSONS } from '../resources/persons';
 
 @Component({
@@ -10,22 +12,32 @@ import { PERSONS } from '../resources/persons';
 })
 export class PersonsSidebarComponent implements OnInit {
   // event declaration
-  @Output() setPerson = new EventEmitter<any>();
+  // @Output() setPerson = new EventEmitter<any>();
 
-  persons = PERSONS;
+  selectedPerson: Person;
+
+  persons: Person[];
   selected = [];
 
-  constructor() { }
+  constructor(private personService: PersonService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getPersons();
+  }
+
+  getPersons(): void {
+    this.personService.getPersons()
+        .subscribe(persons => this.persons = persons);
+  }
 
   onSelect(person: Person, index: number): void {
     // clear any selection and set the selected index to active mode
     this.selected = [];
     this.selected[index] = true;
 
+    this.selectedPerson = person;
     // event usage
-    this.setPerson.emit(person);
+    // this.setPerson.emit(person);
   }
 
 }

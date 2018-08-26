@@ -11,6 +11,8 @@ import { CardsComponent } from './cards/cards.component';
 import { RatingsComponent } from './ratings/ratings.component';
 import { ModalMessageComponent } from './modal-message/modal-message.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { SearchResultComponent } from './search-result/search-result.component';
     CardsComponent,
     RatingsComponent,
     ModalMessageComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

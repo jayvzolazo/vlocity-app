@@ -18,7 +18,8 @@
         *ngFor="let person of persons; let i = index"
         (click)="onSelect(person, i)"
         [ngClass]="{ 'active ' : selected[i] }">
-        <a class="nav-link" href="#">{{ person.name }}</a>
+        <!-- <a class="nav-link" href="#">{{ person.name }}</a> -->
+        <a class="nav-link" routerLink="/profile/{{ person.id }}">{{ person.name }}</a>
       </li>
     </ul>
   </div>
