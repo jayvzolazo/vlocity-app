@@ -24,6 +24,26 @@
       text-transform: uppercase;
       background-color: $blue2;
       color: $white;
+
+      &.light-blue {
+        background-color: #92cbec;
+        color: $white;
+      }
+
+      &.green {
+        background-color: #4f8b3d;
+        color: $white;
+      }
+
+      &.orange {
+        background-color: #e56c22;
+        color: $white;
+      }
+
+      &.red {
+        background-color: #c42f35;
+        color: $white;
+      }
     }
 
     .nav {

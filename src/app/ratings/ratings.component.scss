@@ -1,6 +1,15 @@
 /* @import url(//use.fontawesome.com/releases/v5.2.0/css/all.css); */
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 @import '../../colors.scss';
+
+.fa-heart {
+  color: $gray1;
+
+  &.checked {
+    color: $pink1;
+  }
+}
+
 
 fieldset, label { margin: 0; padding: 0; }
 body{ margin: 20px; }

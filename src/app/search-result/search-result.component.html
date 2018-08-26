@@ -1,13 +1,19 @@
-<div class="bg-white border row mb-4 px-3 pt-3 pb-3" *ngFor="let result of results">
+<div class="bg-white rounded profile-result border row mb-4 px-3 pt-3 pb-3" *ngFor="let result of results">
   <div class="col-2 pl-0">
     <img class="rounded profile-photo img-thumbnail" [src]="result.img" />
   </div>
   <div class="col p-0">
     <h3>{{ result.name }}</h3>
+
+    <div class="clearfix">
+      <app-ratings [ratings]="result.rating"></app-ratings>
+    </div>
+
     <div class="short-description">
       <p>{{ result.description }}</p>
     </div>
-    <div class="short-description">
+
+    <div class="clearfix">
       <a href="#" class="btn btn-warning" (click)="viewProfile(result)">View Profile</a>
     </div>
   </div>

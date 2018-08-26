@@ -1,4 +1,4 @@
-<div class="bg-white border row mb-4 px-3 pt-3 pb-3">
+<div class="bg-white border profile-result rounded row mb-4 px-3 pt-3 pb-3">
   <div class="col-2 pl-0">
     <img class="rounded profile-photo img-thumbnail" [src]="person.img" />
   </div>
@@ -12,7 +12,7 @@
       <app-modal-message [person]="person.name"></app-modal-message>
     </div>
     <div class="clearfix">
-      <app-ratings></app-ratings>
+      <app-ratings [ratings]="person.rating"></app-ratings>
     </div>
     <div class="short-description">
       <p>{{ person.description }}</p>
@@ -24,14 +24,14 @@
   <div class="col p-0">
     <ul class="nav nav-tabs">
       <li class="nav-item" *ngFor="let tab of tabs; let tabIndex = index">
-        <a class="nav-link" href="#" (click)="setTab(tabIndex)"
-          [ngClass]="{ 'active': activeTab === tab }">
+        <span class="nav-link" (click)="setTab(tabIndex)"
+          [class.active]="activeTab === tab">
           {{ tab }} {{ (tab === 'About') ? person.name : '' }}
-        </a>
+        </span>
       </li>
     </ul>
 
-    <div class="bg-white border-left border-bottom border-right px-3 pt-3 pb-3" id="about-person"
+    <div class="bg-white tab-content rounded-bottom border-left border-bottom border-right px-3 pt-3 pb-3" id="about-person"
       *ngIf="activeTab === 'About'">
       <p>{{ person.description }}</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -42,7 +42,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
 
-    <div class="bg-white border-left border-bottom border-right px-3 pt-4 pb-3" id="likes-person"
+    <div class="bg-white tab-content rounded-bottom border-left border-bottom border-right px-3 pt-4 pb-3" id="likes-person"
       *ngIf="activeTab === 'Likes'">
       <div class="row">
         <div class="col">
@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div class="bg-white border-left border-bottom border-right px-3 pt-3 pb-3" id="dislikes-person"
+    <div class="bg-white tab-content rounded-bottom border-left border-bottom border-right px-3 pt-3 pb-3" id="dislikes-person"
       *ngIf="activeTab === 'Dislikes'">
       <div class="row">
         <div class="col">

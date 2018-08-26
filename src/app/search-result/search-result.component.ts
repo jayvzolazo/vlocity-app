@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-result',
@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./search-result.component.scss']
 })
 export class SearchResultComponent implements OnInit {
-
   @Input() results: any;
+  @Output() setProfile = new EventEmitter<any>();
 
   constructor() { }
 
@@ -15,7 +15,8 @@ export class SearchResultComponent implements OnInit {
 
   viewProfile(person): void {
     console.log('view', person);
-    // TODO: must create a router now
+
+    this.setProfile.emit(person);
   }
 
 }

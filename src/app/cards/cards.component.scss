@@ -3,9 +3,10 @@
 .card {
   flex: none;
   transition: 0.3s;
+  box-shadow: 0 5px #e56c22;
 
   &:hover {
-    box-shadow: 0 0 10px $gray1;
+    // box-shadow: 0 0 10px $gray1;
   }
 
   .card-img-top {
