@@ -4,10 +4,16 @@
   </div>
   <div class="col p-0">
     <h3>{{ result.name }}</h3>
+
+    <div class="clearfix">
+      <app-ratings [ratings]="result.rating"></app-ratings>
+    </div>
+
     <div class="short-description">
       <p>{{ result.description }}</p>
     </div>
-    <div class="short-description">
+
+    <div class="clearfix">
       <a href="#" class="btn btn-warning" (click)="viewProfile(result)">View Profile</a>
     </div>
   </div>

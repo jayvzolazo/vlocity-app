@@ -12,7 +12,7 @@
       <app-modal-message [person]="person.name"></app-modal-message>
     </div>
     <div class="clearfix">
-      <app-ratings></app-ratings>
+      <app-ratings [ratings]="person.rating"></app-ratings>
     </div>
     <div class="short-description">
       <p>{{ person.description }}</p>
@@ -25,7 +25,7 @@
     <ul class="nav nav-tabs">
       <li class="nav-item" *ngFor="let tab of tabs; let tabIndex = index">
         <a class="nav-link" href="#" (click)="setTab(tabIndex)"
-          [ngClass]="{ 'active': activeTab === tab }">
+          [class.active]="activeTab === tab">
           {{ tab }} {{ (tab === 'About') ? person.name : '' }}
         </a>
       </li>
